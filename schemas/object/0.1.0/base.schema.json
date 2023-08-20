@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MetaverseObject",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the metaverse object."
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed description of the metaverse object."
+    },
+    "attributes": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": "object",
+          "properties": {
+            "trait_type": {
+              "type": "string",
+              "enum": ["Upgradability", "AccessLevel"],
+              "description": "The type of trait this attribute represents."
+            },
+            "value": {
+              "type": "string",
+              "description": "The value of the trait."
+            }
+          },
+          "required": ["trait_type", "value"]
+        }
+      ]
+    },
+    "interactive_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL for the interactive representation of the metaverse object."
+    }
+  },
+  "required": ["name", "description", "attributes", "interactive_url"]
+}
