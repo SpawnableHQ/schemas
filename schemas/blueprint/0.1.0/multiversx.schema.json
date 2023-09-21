@@ -1,15 +1,15 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "MetaverseObject",
+  "title": "Blueprint",
   "type": "object",
   "properties": {
     "name": {
       "type": "string",
-      "description": "The name of the metaverse object."
+      "description": "The name of the blueprint."
     },
     "description": {
       "type": "string",
-      "description": "A detailed description of the metaverse object."
+      "description": "A detailed description of the blueprint."
     },
     "attributes": {
       "type": "array",
@@ -34,7 +34,7 @@
     "interactive_url": {
       "type": "string",
       "format": "uri",
-      "description": "URL for the interactive representation of the metaverse object."
+      "description": "URL for the interactive representation of the blueprint."
     }
   },
   "required": ["name", "description", "attributes", "interactive_url"]
