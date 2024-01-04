@@ -1,0 +1,10 @@
+{
+  "prev": "hash_of_the_previous_inscription",
+  "v": "2024-01",
+  "scope": "myproject",
+  "type": "text/plain",
+  "data": "VGhpcyBpcyBteSBmaXJzdCBpbnNjcmlwdGlvbi4=",
+  "meta": {
+    "field1": "value1"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Inscription",
+  "type": "object",
+  "properties": {
+    "prev": {
+      "type": ["string", "null"],
+      "description": "The hash of the previous inscription transaction, present only for upgrades."
+    },
+    "v": {
+      "type": "string",
+      "description": "The version of the inscription, typically in YYYY-MM format."
+    },
+    "scope": {
+      "type": "string",
+      "description": "The scope or namespace of the inscription."
+    },
+    "type": {
+      "type": "string",
+      "description": "The MIME type of the content."
+    },
+    "data": {
+      "type": "string",
+      "description": "The content of the inscription, encoded in base64."
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Arbitrary metadata associated with the inscription."
+    }
+  },
+  "required": ["v", "scope", "type", "data"]
+}
